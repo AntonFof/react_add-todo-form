@@ -28,13 +28,13 @@ export const App: React.FC = () => {
   const [hasUserEror, setHasUserEror] = useState(false);
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
 
-  const handleTitle = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(event.target.value);
+  const handleTitle = (eventTitle: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(eventTitle.target.value);
     setHasTitleEror(false);
   };
 
-  const handleUser = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setUserId(+event.target.value);
+  const handleUser = (eventUser: React.ChangeEvent<HTMLSelectElement>) => {
+    setUserId(+eventUser.target.value);
     setHasUserEror(false);
   };
 
